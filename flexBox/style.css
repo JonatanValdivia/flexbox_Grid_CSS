@@ -1,0 +1,151 @@
+/*Iremos aqui aprender sobre os dois eixos para trabalho
+Eixos: main axis (eixo principal) e o cross axis (eixo cruzado/segundário)
+Main axis -> esqueda para a direita
+                                    ->  Direções padrões
+Cross axis -> De cima para baixo*/
+
+/*Outra observação: hão propriedades que irão comfigurar o container e outras que irá configurar os items*/
+.item{
+  padding: 5px;
+  margin: 5px;
+  background-color: green;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  /*Estamos pegando o margin dos dois lados (left e right) e também o padding (que também são dos dois lados)*/
+             /*Aqui teremos três por linhas*/
+  width: calc(33.3333% - 20px);
+}
+
+.container{
+  /*display: flex; Agora todos os items ocupam a mesma linha*/
+  max-width: 600px; /*Se for criado novos items, eles sairão do container, pois o mesmo está definido com um máximo de tamanho*/
+  /*height: 600px; Por padrão, os filhos desse container irão ter todo o tamanho do elemento pai, isso internamente.*/
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  /*flex-direction: row;*/
+  justify-content: center;
+  align-items: center;
+  /*align-content:  flex-start;*/
+}
+
+/*Ao invés de acidicionar o display flex em container, iremos criar uma classe flexível, e usaremos essa classe onde quisermos que seja flex*/
+.flexivel{
+  display: flex;
+}
+
+/*Se quisermos usar essa classe, apenas colocamos ela junto ao container*/
+.horizontal{
+  /*flex-direction: row-reverse;*/
+  flex-direction: row; /*Elementos dispostos em linha*/
+}
+/*Se quisermos usar essa classe colocamos ela jutno ao container*/
+.vertical{
+  /*flex-direction: column-reverse;*/
+  flex-direction: column;
+}
+
+/*Sempre que necessário a quebra de linha, usa essa classe: também é possível usar a quebra de linha revertida*/
+.quebraDeLinha{
+  /*Permite que haja uma quebra de linha entre os filhos items, caso haja pouco espaço no container*/
+  /*flex-wrap: wrap-reverse; -> inverte o main axis, quebra com reversão*/
+  flex-wrap: wrap;
+}
+
+.fluxoHorizontalQuebra{
+  flex-flow: row wrap ;
+}
+/*tamanho zero*/
+.tam0{
+  flex-grow: 0;
+}
+
+.tam1{
+  flex-grow: 1;
+}
+
+.tam2{
+  flex-grow: 2;
+}
+
+.tam3{
+  flex-grow: 3;
+}
+
+.baseAuto{
+  flex-basis: auto;
+}
+
+.base0{
+  flex-basis: 0;
+}
+
+
+.base1{
+  flex-basis: 1;
+}
+
+.base2{
+  flex-basis: 2;
+}
+
+.base3{
+  flex-basis: 3;
+}
+
+.ordem0{
+  order: 0;
+}
+
+.ordem1{
+  order: 1;
+}
+
+.ordem2{
+  order: 2;
+}
+
+.ordem3{
+  order: 3;
+}
+
+.ordem4{
+  order: 4;
+}
+
+.reduzir0{
+  flex-shrink: 0;
+}
+
+.reduzir1{
+  flex-shrink: 1;
+}
+.reduzir2{
+  flex-shrink: 2;
+}
+
+.reduzir3{
+  flex-shrink: 3;
+}
+
+.reduzir4{
+  flex-shrink: 4;
+}
+
+.flex{
+  flex: 2 0 300px;
+}
+
+.inicio_self{
+  align-self: flex-start;
+}
+
+.fim_self{
+  align-self: flex-end;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}

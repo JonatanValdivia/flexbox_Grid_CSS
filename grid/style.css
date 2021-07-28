@@ -1,0 +1,24 @@
+body{
+  font-family: arial;
+  color: black;
+}
+
+.conatiner{
+  display: grid; /*Grid siginifica grade*/
+  /*inline-grid utiliza toda a linha do maior contúdo que há dentro de um elemento filho, se todos tiverem o mesmo tamanho, todos então terão tembém
+  Ex: se a maior linha fosse de 500px, por conta do conteúdo, todas as outras linhas, mesmo que curtas também dariam esse mesmo tamanho*/
+
+  grid-template-columns: auto auto;/*Após determinarmos que é grid, determinamos qual o tamplate dele/padrão dele. Determinamos quantas colunas nossa grade terá. Determinaremos aqui também a quantidade de colunas e o seus repectivos tamanhos. Com auto auto -> determinamos que será apenas duas colunas, com a mesma quantidade de linhas. Colocando: auto auto auto -> determinamos que haverá três colunass
+  Podemos também determinar qual o tamanho de cada coluna individualmente, colocando os seus repectivos valores ao invés de "auto". Ex: 90px 180px 270px
+  */
+
+  grid-template-rows: 30px 30px 30px;/*O tamanho das linhas, o padrão é auto*/
+
+}
+
+.item{
+  background-color: #048;
+  color: white;
+  border: 1px solid black;
+  text-align: center;
+}
