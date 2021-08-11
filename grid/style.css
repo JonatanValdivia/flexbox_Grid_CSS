@@ -7,12 +7,18 @@ body{
   display: grid; /*Grid siginifica grade*/
   /*inline-grid utiliza toda a linha do maior contúdo que há dentro de um elemento filho, se todos tiverem o mesmo tamanho, todos então terão tembém
   Ex: se a maior linha fosse de 500px, por conta do conteúdo, todas as outras linhas, mesmo que curtas também dariam esse mesmo tamanho*/
+  /*grid-template-columns: auto auto auto;Dessa forma determinamos que haverão três colunas grid com os mesmos tamanhos*/
+  
+  /* grid-template-columns: 100px 150px 200px auto; */
+  grid-template-columns: auto auto auto;
 
-  grid-template-columns: auto auto;/*Após determinarmos que é grid, determinamos qual o tamplate dele/padrão dele. Determinamos quantas colunas nossa grade terá. Determinaremos aqui também a quantidade de colunas e o seus repectivos tamanhos. Com auto auto -> determinamos que será apenas duas colunas, com a mesma quantidade de linhas. Colocando: auto auto auto -> determinamos que haverá três colunass
+  /*grid-template-columns: auto minmax(100px, 200px); Após determinarmos que é grid, determinamos qual o tamplate dele/padrão dele. Determinamos quantas colunas nossa grade terá. Determinaremos aqui também a quantidade de colunas e o seus repectivos tamanhos. Com auto auto -> determinamos que será apenas duas colunas, com a mesma quantidade de linhas. 
+
   Podemos também determinar qual o tamanho de cada coluna individualmente, colocando os seus repectivos valores ao invés de "auto". Ex: 90px 180px 270px
   */
 
-  grid-template-rows: 30px 30px 30px;/*O tamanho das linhas, o padrão é auto*/
+  /* grid-template-rows: 30px 60px 90px;O tamanho das linhas, o padrão é auto */
+  grid-template-rows: auto;
 
 }
 
@@ -21,4 +27,17 @@ body{
   color: white;
   border: 1px solid black;
   text-align: center;
+}
+
+/*GAP -> ESPAÇAMENTOS DO GRID*/
+#gap{
+  /*Adiciona espaços entre as colunas e linhas*/
+  /* grid-gap: 10; /*adiciona um espaçamento tanto nas linhas quanto nas colunas, com o tamanho de 10 em ambos os lados*/
+  grid-gap: 30px 50px;
+
+  /*Adiciona espaços apenas entre as colunas*/
+  /* grid-column-gap: 10px; */
+
+  /*Adiciona espaços apenas entre as linhas*/
+  /* grid-row-gap: 10px; */
 }
