@@ -63,3 +63,14 @@ body{
 .it8{
   grid-column: 1 / span 2; 
 }
+/*GRID-AREA*/
+.area{
+  /* grid-area: 1 / 1 / 1 / 1; -> Padrão */
+  grid-area: 1 / 1 / 3 / 4; 
+  /* É uma junção de todos os atributos:
+    grid-row-start:
+    grid-collum-start: 
+    grid-row-end:
+    grid-collum-end:
+   */
+}
