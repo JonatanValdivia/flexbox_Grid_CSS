@@ -10,7 +10,7 @@ body{
   /*grid-template-columns: auto auto auto;Dessa forma determinamos que haverão três colunas grid com os mesmos tamanhos*/
   
   /* grid-template-columns: 100px 150px 200px auto; */
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 
   /*grid-template-columns: auto minmax(100px, 200px); Após determinarmos que é grid, determinamos qual o tamplate dele/padrão dele. Determinamos quantas colunas nossa grade terá. Determinaremos aqui também a quantidade de colunas e o seus repectivos tamanhos. Com auto auto -> determinamos que será apenas duas colunas, com a mesma quantidade de linhas. 
 
@@ -18,7 +18,8 @@ body{
   */
 
   /* grid-template-rows: 30px 60px 90px;O tamanho das linhas, o padrão é auto */
-  grid-template-rows: auto;
+  grid-template-rows: 8vh 5vh 8vh;
+
 
 }
 
@@ -73,4 +74,31 @@ body{
     grid-row-end:
     grid-collum-end:
    */
+}
+
+/* Aula cinco/última de grid */
+
+.header{
+  grid-area: header;
+}
+
+.principal{
+  grid-area: principal;
+}
+
+.lateral{
+  grid-area: lateral;
+  background-color: rgb(124, 55, 55);
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.conatiner{
+  grid-template-areas: 
+    "header header header header" /*Colocamos dessa forma (com quatro headers) pois temos quatro components dentro do container, e, justamente para ele usar toda a linha, dizemos a quantidade de colunas que ele irá ocupar*/
+    "principal principal principal lateral" /* "principal principal . lateral" */
+    "footer footer footer footer"
+  ;
 }
